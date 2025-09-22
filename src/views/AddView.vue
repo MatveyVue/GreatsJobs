@@ -1,6 +1,6 @@
 <template>
 <div class="backdrop">
-<RouterLink style="text-decoration: none; color: white" to="/main">
+<RouterLink style="text-decoration: none; color: white" to="/home">
   <h1 class="jobs">Add:</h1>
 </RouterLink>
 <div class="input-group">
