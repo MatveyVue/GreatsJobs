@@ -15,9 +15,9 @@ Example:<br>
 5)Tags:
 </p>
 <div class="scroll">
-<p>.</p>
-<p>.</p>
-<p>.</p>
+<p style="color: rgb(24, 24, 24);">.</p>
+<p style="color: rgb(24, 24, 24);">.</p>
+<p style="color: rgb(24, 24, 24);">.</p>
 </div>
 
 <div class="link-display">
@@ -31,10 +31,6 @@ Example:<br>
 </template>
 
 <style scoped>
-.scroll {
-  background-color: rgb(24, 24, 24);
-}
-
 .container {
   max-width: 600px;
   margin: 50px auto;
