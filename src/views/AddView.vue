@@ -14,6 +14,11 @@ Example:<br>
 4)Вetailed Information:<br>
 5)Tags:
 </p>
+<div class="scroll">
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</div>
 
 <div class="link-display">
 <center>
@@ -26,6 +31,10 @@ Example:<br>
 </template>
 
 <style scoped>
+.scroll {
+  background-color: rgb(24, 24, 24);
+}
+
 .container {
   max-width: 600px;
   margin: 50px auto;
@@ -86,11 +95,13 @@ textarea {
 }
 
 .pay {
-  background-color: white;
+  background-color: #97f492;
+  font-family: Geologica;
+  font-size: 16px;
   height: 45px;
   border: none;
   border-radius: 15px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 90%;
   top:90%;
