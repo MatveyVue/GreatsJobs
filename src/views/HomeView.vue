@@ -10,7 +10,9 @@
 <div class="anket">
 <div>
 <div @click="openModal(person)" v-for="(person, index) in profile" :key="index" class="ankets">
-    <img loading="lazy" class="icon" :src="person.icon" alt="Profile Icon" v-if="person.icon">
+    <link rel="preload">
+    <img class="icon" :src="person.icon" alt="Profile Icon" v-if="person.icon">
+    </link>
     <p class="nick">{{ person.nick }}</p>
     <p class="infd">{{ person.infd }}</p>
     <p class="info">{{ person.info }}</p>
