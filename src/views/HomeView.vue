@@ -60,3 +60,10 @@ const closeModal = () => {
   selectedProfile.value = null; // Очищаем выбранный профиль при закрытии
 };
 </script>
+
+<style scoped>
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+</style>
