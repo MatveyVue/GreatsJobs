@@ -7,7 +7,9 @@ import { RouterLink } from 'vue-router';
 <div>
 <center>
 <div class="utback">
-    <img loading="lazy" class="duck" src="../assets/UtyaGold.gif">
+    <link rel="preload">
+    <img class="duck" src="../assets/UtyaGold.gif">
+    </link>
 </div>
     <h2>Create job search profiles<br>or look for a job</h2>
     <RouterLink style="text-decoration: none; color: black;" to="/home">
