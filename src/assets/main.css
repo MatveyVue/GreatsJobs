@@ -9,8 +9,8 @@ body {
 }
 
 .duck {
-    width: 95%;
-    margin-top: -10%;
+    width: 70vw;
+    margin-top: -10vw;
 }
 
 .utback {
@@ -32,7 +32,6 @@ body {
     bottom: 0;
     margin-bottom: 25px;
     left: 5%;
-    cursor: pointer;
 }
 
 .jobs {
@@ -143,7 +142,6 @@ body {
     margin-top: -55px;
     margin-right: 20px;
     border-radius: 10px;
-    cursor: pointer;
 }
 
 .all {
@@ -181,8 +179,6 @@ body {
     position: absolute;
     margin-left: 90%;
     margin-top: 10px;
-    cursor: pointer;
-    font-size: 16px
 }
 
 .contact {
