@@ -1,8 +1,23 @@
 <template>
 <div class="backdrop">
+<RouterLink style="text-decoration: none; color: white" to="/">
   <h1 class="jobs">Add:</h1>
+</RouterLink>
 <div class="input-group">
-  <textarea class="text" id="messageInput" type="text"  v-model="userMessage" placeholder="Your Ankets: 1)Stack 2)Short Information 3)Full Information 4)Tags 5)Your User"></textarea>
+  <textarea class="text" id="messageInput" type="text"  v-model="userMessage" placeholder=" Your Information"></textarea>
+</div>
+<p class="example">
+Example:<br>
+1)Connection: @username<br>
+2)Your: Worker/Employer<br>
+3)Brief Information:<br>
+4)Description:<br>
+5)Tags:
+</p>
+<div class="scroll">
+<p style="color: rgb(24, 24, 24);">.</p>
+<p style="color: rgb(24, 24, 24);">.</p>
+<p style="color: rgb(24, 24, 24);">.</p>
 </div>
 
 <div class="link-display">
@@ -62,28 +77,38 @@ input[type="text"] {
 .text {
   background-color: rgb(27, 27, 27);
   width: 90%;
-  height: 150px;
+  height: 200px;
   margin-left: 15px;
   border-radius: 15px;
   border: none;
+  resize: none;
 }
 
 textarea {
-    color: white; 
-    font-size: 16px;
+  color: white; 
+  font-size: 16px;
+  resize: none;
 }
 
 .pay {
-    background-color: white;
-    height: 45px;
-    border: none;
-    border-radius: 15px;
-    position: absolute;
-    bottom: 0;
-    width: 90%;
-    top:90%;
-    left:50%;
-    transform:translate(-50%, -50%);
+  background-color: #97f492;
+  font-family: Geologica;
+  font-size: 16px;
+  height: 45px;
+  border: none;
+  border-radius: 15px;
+  position: fixed;
+  width: 90%;
+  top:95%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  font-family: Geologica
+}
+
+.example {
+  color: white;
+  font-family: Geologica;
+  margin-left: 20px
 }
 </style>
 
@@ -96,7 +121,7 @@ import { ref, computed } from 'vue';
 const recipientWallet = 'matveymatvey.ton';
 // Сумма в нано-TON. 1 TON = 1,000,000,000 нано-TON.
 // Здесь 1000000000 = 1 TON.
-const transferAmount = 10000000; 
+const transferAmount = 1000000000; 
 
 // --- Реактивные данные ---
 // ref() делает переменную реактивной. Когда ее значение меняется,
