@@ -12,13 +12,6 @@ body {
     scrollbar-width: none; 
 }
 
-.not {
-  text-align: center;
-  color: white;
-  margin-top: 75%;
-  font-size: 24px;
-}
-
 .jobs {
     color: white;
     margin-left: 15px;
