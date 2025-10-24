@@ -77,9 +77,12 @@ const selectedProfile = ref(null); // Здесь будет храниться �
 const isTelegramApp = ref(false);
 
 onMounted(() => {
-  // Ваша логика проверки, устанавливающая isTelegramApp
-  if (window.Telegram && window.Telegram.WebApp) {
+  // Проверяем существование Telegram Web App API и наличие initData
+  if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initData) {
     isTelegramApp.value = true;
+    // Опционально:
+    // window.Telegram.WebApp.ready();
+    // window.Telegram.WebApp.expand();
   } else {
     isTelegramApp.value = false;
   }
