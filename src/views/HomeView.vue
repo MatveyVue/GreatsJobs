@@ -27,9 +27,14 @@
 </div>
 <p style="color: rgb(24, 24, 24);">.</p>
 
+<transition name="modal-bg">
+    <div v-if="open && selectedProfile" class="modal-background"></div>
+</transition>
+
+
 <transition name="modal">
 <div v-if="open && selectedProfile" class="modal" @click.self="closeModal">
-    <div  class="modal-content">
+    <div class="modal-content">
     <div @click="closeModal" class="close">
     <div>
         <div class="leftright"></div>
@@ -68,12 +73,14 @@ const selectedProfile = ref(null); // Здесь будет храниться �
 const openModal = (person) => {
   selectedProfile.value = person; // Сохраняем выбранный профиль
   open.value = true; // Открываем модальное окно
+  document.body.classList.add('modal-active-background');
 };
 
 // Функция для закрытия модального окна
 const closeModal = () => {
   open.value = false;
   selectedProfile.value = null; // Очищаем выбранный профиль при закрытии
+  document.body.classList.remove('modal-active-background');
 };
 
 window.addEventListener('load', function() {
