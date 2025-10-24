@@ -25,6 +25,7 @@
 </div> 
 </div>
 </div>
+<p style="color: rgb(24, 24, 24);">.</p>
 
 <transition name="modal">
 <div v-if="open && selectedProfile" class="modal" @click.self="closeModal">
