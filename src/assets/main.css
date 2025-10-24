@@ -110,10 +110,10 @@ body {
     background-color: #97f492;
     border: none;
     font-family: Geologica;
-    width: 80px;
+    width: 120px;
     height: 30px;
     float: right;
-    margin-top: -50px;
+    margin-top: -55px;
     margin-right: 20px;
     border-radius: 10px;
 }
@@ -144,15 +144,64 @@ body {
 }
 
 .close {
-    background-color: #141414;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    color: white;
+    display: flex;
+    float: right;
+}
+.close div {
+    cursor: pointer;
+    position: relative;  
+    height: 68px;
+    width: 50px;
+    margin-left: 8px;
+    margin-top: -8px;
+}
+
+.close .leftright {
+    height: 4px;
+    width: 25px;
     position: absolute;
-    margin-left: 90%;
-    margin-top: 10px;
+    margin-top: 24px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    transition: all .3s ease-in;
+}
+
+.close .rightleft {
+    height: 4px;
+    width: 25px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    transition: all .3s ease-in;
+}
+
+.close .close-btn {
+    margin: 54px 0 0 -5px;
+    position: absolute;
+    color: #97f492;
+    font-family: Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all .3s ease-in;
+    opacity: 0; 
+}
+
+.close div:hover .leftright {
+    transform: rotate(-45deg);
+    background-color: #97f492;
+}
+
+.close div:hover .rightleft {
+    transform: rotate(45deg);
+    background-color: #97f492;
+}
+
+.close div:hover .close-btn {
+    opacity: 1;
 }
 
 .contact {
@@ -177,6 +226,87 @@ body {
   transform: translateY(-20px);
 }
 
+#preloader {
+  position: fixed; /* Фиксированное позиционирование, чтобы он был поверх всего */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 101%;
+  background-color: rgb(24, 24, 24); /* Цвет фона прелоадера */
+  z-index: 9999; /* Очень высокий z-index, чтобы быть поверх всего */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Плавный переход для скрытия */
+  opacity: 1; /* Изначально видим */
+}
+
+/* --- Стиль для скрытия прелоадера --- */
+#preloader.hidden {
+  opacity: 0; /* Делаем невидимым */
+  pointer-events: none; 
+  transform: translateY(-100%);
+}
+
+#preloader.hidden {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%); 
+    pointer-events: none;
+  }
+}
+
+.loader,
+.loader:after {
+  overflow:hidden;
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(101,171,248, 0.2);
+  border-right: 1.1em solid rgba(101,171,248, 0.2);
+  border-bottom: 1.1em solid rgba(101,171,248, 0.2);
+  border-left: 1.1em solid #97f492;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (min-width: 600px) and (max-width: 20000px) {
 .jobs {
     display: none;
@@ -196,4 +326,3 @@ body {
     display: none;
 }
 }
-
