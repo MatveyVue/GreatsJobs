@@ -1,5 +1,4 @@
 <template>
-<div v-if="isTelegramApp">
 <div id="preloader">
   <div style="margin-top: -20px;" class="loader">loading</div>
 </div>
@@ -62,31 +61,14 @@
 <p></p>
 <p></p>
 </div>
-
-<div v-else class="not-telegram-app">
-    <p class="not">This is not a mini app.</p>
-</div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 import { profile } from '../script/home.js';
 
 const open = ref(false); // Управляет видимостью модального окна
 const selectedProfile = ref(null); // Здесь будет храниться объект выбранного профиля
-const isTelegramApp = ref(false);
-
-onMounted(() => {
-  // Проверяем существование Telegram Web App API и наличие initData
-  if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initData) {
-    isTelegramApp.value = true;
-    // Опционально:
-    // window.Telegram.WebApp.ready();
-    // window.Telegram.WebApp.expand();
-  } else {
-    isTelegramApp.value = false;
-  }
-});
 
 // Функция, которая вызывается при клике на анкету
 const openModal = (person) => {
