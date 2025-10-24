@@ -7,6 +7,9 @@ body {
     scrollbar-width: none;
     margin: 0;
     height: 100vh;
+    -ms-touch-action: none; 
+    user-select: none;
+    scrollbar-width: none; 
 }
 
 .jobs {
