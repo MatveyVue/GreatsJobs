@@ -3,11 +3,11 @@
   <div style="margin-top: -20px;" class="loader">loading</div>
 </div>
 <h1 class="jobs">Jobs:</h1>
-<RouterLink to="add">
+<a href="https://t.me/GreatsSupportBot">
     <button style="text-decoration: none; color: black" class="add">Add Jobs/Work</button>
-</RouterLink>
+</a>
 <div class="categories">
-    <button style="text-decoration: none; color: black" class="all">All</button>
+    <button style="text-decoration: none; color: black;" class="all">All</button>
 </div>
 
 <div class="anket" style="overflow-y: scroll;">
@@ -52,7 +52,7 @@
             <li v-for="(tag, index) in selectedProfile.tags" :key="index">{{ tag }}</li>
         </ul>
     <a :href="selectedProfile.link" target="_blank">
-        <button style="text-decoration: none; color: black" class="contact">Contact</button>
+        <button style="text-decoration: none; color: black; cursor: pointer;" class="contact">Contact</button>
     </a>
     </div>
 </div>
@@ -63,7 +63,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { profile } from '../script/home.js';
 
 const open = ref(false); // Управляет видимостью модального окна
